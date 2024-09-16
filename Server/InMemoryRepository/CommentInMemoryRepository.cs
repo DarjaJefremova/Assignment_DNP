@@ -10,6 +10,10 @@ public class CommentInMemoryRepository : ICommentRepository
     public CommentInMemoryRepository()
     {
         comments = new List<Comment>();
+        _ = AddAsync(new Comment(1, 1, "First comment"));
+        _ = AddAsync(new Comment(2, 1, "Second comment"));
+        _ = AddAsync(new Comment(3, 2, "Third comment"));
+        _ = AddAsync(new Comment(4, 2, "Forth comment"));
     }
     
     public Task AddAsync(Comment comment)
